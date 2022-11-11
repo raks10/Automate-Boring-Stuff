@@ -1,0 +1,21 @@
+
+line = input("Enter message : ")
+
+a = ''
+l = line.split(" ")
+vowel = ['a','e','i','o','u']
+
+for i in l:
+    if i[0] in vowel:
+        word = (i + 'yay' + " ").lower()
+    else:
+        word = (i[1:] + i[0] + 'ay' + " ").lower()
+
+    if i.istitle():
+        word = word.title()
+
+    if i.isupper():
+        word = word.upper()
+
+    a = a+word
+print(a)
